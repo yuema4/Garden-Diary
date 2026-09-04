@@ -1,0 +1,9 @@
+{
+  "name": "花园日记",
+  "description": "一个用于给花草定时浇水、驱虫、施肥的植物养护日程规划与实时提醒平台，支持AI制定专属养护日程。",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-sage-50: #F4F7F3;
+  --color-sage-100: #E0E7DE;
+  --color-sage-200: #DCE4DB;
+  --color-sage-300: #A1ACA0;
+  --color-sage-500: #4A6741;
+  --color-sage-600: #3A4D39;
+  --color-sage-700: #2C3A2B;
+  --color-sage-800: #1A2419;
+  --color-clay-500: #C97D60;
+  --color-clay-600: #B06548;
+  
+  /* Bento Special Color Tokens */
+  --bento-bg: #F7F9F5;
+  --bento-card-bg: #FFFFFF;
+  --bento-brand: #3A4D39;
+  --bento-accent: #4A6741;
+  --bento-border: #E0E7DE;
+  --bento-text: #2D3436;
+  --bento-muted: #6B7B6A;
+}
+
+/* Custom visual additions */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bento-bg);
+  color: var(--bento-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth transition defaults */
+.transition-all-default {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom scrollbars for botanical dashboard aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage-200);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage-300);
+}
+
+/* Bento aesthetic glass cards with rounded-[32px] */
+.bento-tile {
+  background-color: var(--bento-card-bg);
+  border: 1px solid var(--bento-border);
+  border-radius: 32px;
+  box-shadow: 0 4px 20px -2px rgba(58, 77, 57, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bento-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -4px rgba(58, 77, 57, 0.08);
+}
+
+.bento-badge {
+  background-color: #F0F4EF;
+  color: #4A6741;
+  border: 1px solid #DCE4DB;
+}
+
+
